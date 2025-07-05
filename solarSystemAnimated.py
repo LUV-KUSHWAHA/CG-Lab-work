@@ -92,24 +92,24 @@ def main():
 
         draw_sphere(x,y,30,YELLOW) #sun
         #planets_orbit
-        xc,yc = animation(x,y,90,60,theta)
+        xc,yc = animation(x,y,90,60,theta*2.75)
         draw_sphere(int(xc),int(yc),5,GRAY) #Mercury
-        xc,yc = animation(x,y,130,90,theta+30)
+        xc,yc = animation(x,y,130,90,theta*2.5)
         draw_sphere(int(xc),int(yc),10,YELLOWISH_WHITE) #Venus
-        xc,yc = animation(x,y,170,120,theta+90)
+        xc,yc = animation(x,y,170,120,theta*2.25)
         draw_sphere(int(xc),int(yc),10,BLUE) #Earth
-        xc,yc = animation(x,y,210,150,theta+60)
+        xc,yc = animation(x,y,210,150,theta*2)
         draw_sphere(int(xc),int(yc),7,RED) #Mars
-        xc,yc = animation(x,y,250,180,theta+120)
+        xc,yc = animation(x,y,250,180,theta*1.75)
         draw_sphere(int(xc),int(yc),20,JUP) #Jupiter
-        xc,yc = animation(x,y,320,210,theta+270)
+        xc,yc = animation(x,y,320,210,theta*1.5)
         draw_sphere(int(xc),int(yc),18,GOLD) #Saturn
-        xc,yc = animation(x,y,390,240,theta+330)
+        xc,yc = animation(x,y,390,240,theta*1.25)
         draw_sphere(int(xc),int(yc),14,CYAN) # Uranus
-        xc,yc = animation(x,y,450,270,theta+180)
+        xc,yc = animation(x,y,450,270,theta)
         draw_sphere(int(xc),int(yc),14,DEEP_BLUE) #Neptune
 
-        theta = (theta + 2)%360
+        theta = (theta + 2) # theta = (theta+2) % 36o
 
         pygame.display.update()
 
